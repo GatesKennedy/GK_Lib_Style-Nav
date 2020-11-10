@@ -1,7 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { CSSTransition } from 'react-transition-group';
+//  COMPS
+import Separator from './Main/Separator/Separator.jsx';
+import Menu_DropMulti from './UI/Menu_DropMulti/Menu_DropMulti.jsx';
+import Modal_0 from './UI/Modal_0/Modal_0.jsx';
 //  STYLE
 import './index.css';
+import { DemoCont } from './Design/styled';
 import { ReactComponent as BellIcon } from './icons/bell.svg';
 import { ReactComponent as MessengerIcon } from './icons/messenger.svg';
 import { ReactComponent as CaretIcon } from './icons/caret.svg';
@@ -13,15 +18,18 @@ import { ReactComponent as BoltIcon } from './icons/bolt.svg';
 
 function App() {
   return (
-    <Navbar>
-      <NavItem icon={<PlusIcon />} />
-      <NavItem icon={<BellIcon />} />
-      <NavItem icon={<MessengerIcon />} />
+    <DemoCont>
+      <Separator _title='Multi-level Dropdown' _text='Menu_DropMulti' />
+      <Navbar>
+        <NavItem icon={<PlusIcon />} />
+        <NavItem icon={<BellIcon />} />
+        <NavItem icon={<MessengerIcon />} />
 
-      <NavItem icon={<CaretIcon />}>
-        <DropdownMenu></DropdownMenu>
-      </NavItem>
-    </Navbar>
+        <NavItem icon={<CaretIcon />}>
+          <DropdownMenu></DropdownMenu>
+        </NavItem>
+      </Navbar>
+    </DemoCont>
   );
 }
 
