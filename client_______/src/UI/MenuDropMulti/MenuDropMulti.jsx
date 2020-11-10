@@ -3,7 +3,7 @@ import { CSSTransition } from 'react-transition-group';
 //  STYLE
 import './index.css';
 
-const Menu_DropMulti = () => {
+const MenuDropMulti = (props) => {
   return (
     <nav className='navbar'>
       <ul className='navbar-nav'>{props.children}</ul>
@@ -11,4 +11,4 @@ const Menu_DropMulti = () => {
   );
 };
 
-export default Menu_DropMulti;
+export default MenuDropMulti;

@@ -2,8 +2,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import { CSSTransition } from 'react-transition-group';
 //  COMPS
 import Separator from './Main/Separator/Separator.jsx';
-import Menu_DropMulti from './UI/Menu_DropMulti/Menu_DropMulti.jsx';
-import Modal_0 from './UI/Modal_0/Modal_0.jsx';
+import MenuDropMulti from './UI/MenuDropMulti/MenuDropMulti.jsx';
+import ModalGKHello from './UI/ModalGKHello/ModalGKHello.jsx';
 //  STYLE
 import './index.css';
 import { DemoCont } from './Design/styled';
@@ -19,8 +19,8 @@ import { ReactComponent as BoltIcon } from './icons/bolt.svg';
 function App() {
   return (
     <DemoCont>
-      <Separator _title='Multi-level Dropdown' _text='Menu_DropMulti' />
-      <Navbar>
+      <Separator _title='Multi-level Dropdown' _text='MenuDropMulti' />
+      <MenuDropMulti>
         <NavItem icon={<PlusIcon />} />
         <NavItem icon={<BellIcon />} />
         <NavItem icon={<MessengerIcon />} />
@@ -28,18 +28,18 @@ function App() {
         <NavItem icon={<CaretIcon />}>
           <DropdownMenu></DropdownMenu>
         </NavItem>
-      </Navbar>
+      </MenuDropMulti>
     </DemoCont>
   );
 }
 
-function Navbar(props) {
-  return (
-    <nav className='navbar'>
-      <ul className='navbar-nav'>{props.children}</ul>
-    </nav>
-  );
-}
+// function Navbar(props) {
+//   return (
+//     <nav className='navbar'>
+//       <ul className='navbar-nav'>{props.children}</ul>
+//     </nav>
+//   );
+// }
 
 function NavItem(props) {
   const [open, setOpen] = useState(false);
